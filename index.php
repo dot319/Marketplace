@@ -2,8 +2,14 @@
 <html>
     <head>
         <title>Marketplace</title>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
     </head>
     <body>
-        Content here
+        <?php include 'php sections/navbar.php' ?>
+
+        <?php include 'php sections/landing_page.php' ?>
+
+        <?php include 'php sections/footer.php' ?>
     </body>
 </html>

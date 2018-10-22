@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Asap', 'Calibri', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url("../images/background-pattern.png");
+}
+
+/* ========== Navbar ==================================================================== */
+#navbar {
+    background-color: rgb(59, 59, 59);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    color: white;
+}
+
+#navbar div {
+    padding: 15px;
+}
+
+#navbar-logo {
+    position: relative;
+    left: 10%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#navbar-login {
+    margin-left: auto;
+}
+
+#navbar-loggedin {
+    margin-left: auto;
+    display: none;
+}
+
+/* ========== Landing page =========================================================*/
+
+#landing-page {
+    text-align: center;
+    padding-top: 50px;;
+}
+
+#landing-page div {
+    padding: 20px;
+}
+
+#landing-page-header p {
+    padding: 10px;
+}
+
+#landing-page-searchbar-itself {
+    height: 80px;
+    width: 50%;
+    min-width: 300px;
+    border-radius: 40px;
+    padding: 30px;
+    font-size: 25px;
+    border: none;
+}
+
+#landing-page-searchbutton-itself {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    font-size: 25px;
+    border: none;
+}
+
+#landing-page-adbutton-itself {
+    height: 100px;
+    width: 300px;
+    background-color: green;
+    border: none;
+    font-size: 25px;
+    color: white;
+}
+
+/* ========== Copyright footer =====================================================*/
+#copyright-footer {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
