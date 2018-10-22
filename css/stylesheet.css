@@ -9,6 +9,13 @@ html {
     background-image: url("../images/background-pattern.png");
 }
 
+/* ========== General styling =========================================================== */
+.outer {
+    margin: 0% 15%;
+    background-color: white !important;
+    padding: 10px;
+}
+
 /* ========== Navbar ==================================================================== */
 #navbar {
     background-color: rgb(59, 59, 59);
@@ -37,6 +44,8 @@ html {
     margin-left: auto;
     display: none;
 }
+
+/* ========== */
 
 /* ========== Landing page =========================================================*/
 

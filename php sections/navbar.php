@@ -7,7 +7,7 @@
 
         </div>
         <div id="navbar-login">
-        Register / login
+            <a href="register.php">Register</a> / login
         </div>
         <div id="navbar-loggedin">
         Messages, Profile, Make ad, log out
