@@ -3,6 +3,7 @@ window.onload = function() {
 }
 
 function resizeDivs() {
+    console.log("test");
     if (document.getElementById("registration-form")) {
         expandDiv(document.getElementById("registration-form"));
     }
@@ -23,6 +24,9 @@ function resizeDivs() {
     }
     if (document.getElementById("own-profile")) {
         expandDiv(document.getElementById("own-profile"));
+    }
+    if (document.getElementById("ad-placed")) {
+        expandDiv(document.getElementById("ad-placed"));
     }
 }
 

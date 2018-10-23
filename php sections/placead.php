@@ -4,6 +4,6 @@
         <p><input name="title" type="text" placeholder="Ad title"></p>
         <p><textarea name="description" type="text" placeholder="Ad description"></textarea></p>
         <p><input name="price" type="number" step="0.01" placeholder="Price"></p>
-        <p><input name="submit" type="submit"></p>
+        <p><input name="submit" type="submit" value="Place ad"></p>
     </form>
 </div>
