@@ -7,7 +7,9 @@
         <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
     </head>
     <body>
-    <?php include 'php sections/includejavascript.php' ?>
+    <div id="main-wrapper">
+        
+        <?php include 'php sections/includejavascript.php' ?>
 
         <?php include 'php sections/navbar.php' ?>
 
@@ -17,6 +19,6 @@
 
         <?php include 'php sections/footer.php' ?>
 
-
+        </div>
     </body>
 </html>

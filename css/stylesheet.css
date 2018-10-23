@@ -186,6 +186,18 @@ html {
     padding: 10px;
 }
 
+/* ========== View ads ============================================================= */
+
+.aditem {
+    margin: 15px;
+    padding: 15px;
+    background-color: rgb(243, 243, 243);
+}
+
+.aditem p {
+    padding: 10px;
+}
+
 /* ========== Copyright footer ===================================================== */
 #copyright-footer {
     width: 70%;
@@ -193,10 +205,11 @@ html {
     font-size: 12px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    /* left: 0; */
     padding: 10px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    height: 35px;
 }
 
 #copyright-footer-landing {
@@ -205,8 +218,19 @@ html {
     font-size: 12px;
     position: absolute;
     bottom: 0;
-    left: 0;
     padding: 10px;
     text-align: center;
     background-color: inherit;
+    height: 35px;
 }
+
+html, body {
+    height: 100%;
+}
+
+#main-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 35px;
+    min-height: 100%;
+  }
