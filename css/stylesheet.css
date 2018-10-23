@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 html {
     background-image: url("../images/background-pattern.png");
 }
@@ -52,7 +56,6 @@ html {
 
 #navbar-loggedin {
     margin-left: auto;
-    display: none;
 }
 
 /* ========== Top search bar ======================================================= */

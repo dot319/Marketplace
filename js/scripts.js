@@ -15,8 +15,10 @@ function resizeDivs() {
     if (document.getElementById("loggedin")) {
         expandDiv(document.getElementById("loggedin"));
     }
+    if (document.getElementById("loggedout")) {
+        expandDiv(document.getElementById("loggedout"));
+    }
 }
-
 
 function expandDiv(element) {
     var windowHeight = window.innerHeight;
