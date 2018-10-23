@@ -8,8 +8,12 @@
     <body>
         <?php include 'php sections/navbar.php' ?>
 
-        <?php include 'php sections/landing_page.php' ?>
+        <?php include 'php sections/topsearchbar.php' ?>
 
-        <?php include 'php sections/footer_landing.php' ?>
+        <?php include 'php sections/loggedin.php' ?>
+
+        <?php include 'php sections/footer.php' ?>
+
+        <?php include 'php sections/includejavascript.php' ?>
     </body>
 </html>

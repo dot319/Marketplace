@@ -12,6 +12,9 @@ function resizeDivs() {
     if (document.getElementById("login-page")) {
         expandDiv(document.getElementById("login-page"));
     }
+    if (document.getElementById("loggedin")) {
+        expandDiv(document.getElementById("loggedin"));
+    }
 }
 
 
