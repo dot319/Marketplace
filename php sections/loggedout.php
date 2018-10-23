@@ -1,8 +1,13 @@
 <div class="outer" id="loggedout">
-    You clicked "log out". Refresh the page to be logged out.
-
+    Logged out.
 <?php 
 session_unset();
+echo("<script type='text/javascript'>
+if (!window.location.hash) {
+    window.location = window.location + '#loggedout';
+    window.location.reload();
+}
+</script>");
 ?>
 
 </div>
