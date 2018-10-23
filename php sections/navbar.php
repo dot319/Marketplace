@@ -1,7 +1,7 @@
 <nav>
     <div id="navbar">
         <div id="navbar-logo">
-        Marketplace
+        <a href="index.php">Marketplace</a>
         </div>
         <div id="navbar-menu">
 
