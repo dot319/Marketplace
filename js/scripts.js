@@ -9,6 +9,9 @@ function resizeDivs() {
     if (document.getElementById("registered-successfully")) {
         expandDiv(document.getElementById("registered-successfully"));
     }
+    if (document.getElementById("login-page")) {
+        expandDiv(document.getElementById("login-page"));
+    }
 }
 
 
