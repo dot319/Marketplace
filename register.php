@@ -13,5 +13,7 @@
         <?php include 'php sections/registerform.php' ?>
 
         <?php include 'php sections/footer.php' ?>
+
+        <?php include 'php sections/includejavascript.php' ?>
     </body>
 </html>

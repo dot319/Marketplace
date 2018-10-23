@@ -119,13 +119,31 @@ html {
     color: white;
 }
 
-/* ========== Copyright footer =====================================================*/
+/* ========== Registration page ==================================================== */
+#registration-form {
+    padding: 30px 10%;
+}
+
+#registration-form form p{
+    margin: 20px;
+}
+
+#registration-form input {
+    height: 40px;
+    min-width: 300px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* ========== Copyright footer ===================================================== */
 #copyright-footer {
+    width: 70%;
+    margin: 0% 15%;
     font-size: 12px;
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 10px;
-    width: 100%;
     text-align: center;
+    background-color: inherit;
 }
