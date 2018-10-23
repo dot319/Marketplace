@@ -18,6 +18,12 @@ function resizeDivs() {
     if (document.getElementById("loggedout")) {
         expandDiv(document.getElementById("loggedout"));
     }
+    if (document.getElementById("place-ad")) {
+        expandDiv(document.getElementById("place-ad"));
+    }
+    if (document.getElementById("own-profile")) {
+        expandDiv(document.getElementById("own-profile"));
+    }
 }
 
 function expandDiv(element) {

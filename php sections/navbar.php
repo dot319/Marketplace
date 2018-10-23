@@ -11,7 +11,10 @@
 
 if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] > 0) { ?>
     <div id="navbar-loggedin">
-    Welcome, <?php echo($_SESSION['Username']); ?>! &nbsp;&nbsp;Messages, Profile, Make ad, <a href="loggedout.php">log out</a>
+    Welcome, <?php echo($_SESSION['Username']); ?>! &nbsp;&nbsp;
+    <a href="viewownprofile.php">Profile</a> / 
+    <a href="placead.php">Place ad</a> / 
+    <a href="loggedout.php">Log out</a>
     </div>
 <?php } else { ?>
     <div id="navbar-login">
