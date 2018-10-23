@@ -135,6 +135,11 @@ html {
     padding: 10px;
 }
 
+/* ========== Registered successfully ============================================== */
+#registered-successfully {
+    background-color: white;
+}
+
 /* ========== Copyright footer ===================================================== */
 #copyright-footer {
     width: 70%;
