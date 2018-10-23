@@ -17,7 +17,7 @@ if ($result->num_rows == 0) {
     while($row = $result->fetch_assoc()) {
         if ($password == $row["Password"]) {
             echo("Your password is correct. <br />
-            Welcome, " . $row['Username'] . "!<br />");
+            Welcome, " . $row['Username'] . "! Refresh the page to be logged in.<br />");
             $_SESSION["UserID"] = $row["UserID"];
         } else {
             echo("Wrong password.<br />");
