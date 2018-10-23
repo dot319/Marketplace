@@ -159,6 +159,30 @@ html {
     padding: 10px;
 }
 
+/* ========== Place an ad ========================================================== */
+
+#place-ad {
+    padding: 30px 10%;
+}
+
+#place-ad form p{
+    margin: 20px;
+}
+
+#place-ad input {
+    height: 40px;
+    min-width: 300px;
+    width: 100%;
+    padding: 10px;
+}
+
+#place-ad textarea {
+    height: 120px;
+    min-width: 300px;
+    width: 100%;
+    padding: 10px;
+}
+
 /* ========== Copyright footer ===================================================== */
 #copyright-footer {
     width: 70%;
