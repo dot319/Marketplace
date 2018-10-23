@@ -13,11 +13,14 @@ $result = $conn->query($myQuery);
 
 if ($result->num_rows == 0) {
     echo("Sorry, we don't know that email address!");
-}
-
-if ($result->num_rows > 0) {
+} elseif ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo("Your username is: " . $row["Username"] . ".<br />");
+        if ($password == $row["Password"]) {
+            echo("Your password is correct. <br />
+            Welcome, " . $row['Username'] . "!<br />");
+        } else {
+            echo("Wrong password.<br />");
+        }
     }
 }
 
