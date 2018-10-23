@@ -27,6 +27,7 @@ html {
     flex-direction: row;
     align-items: flex-end;
     color: white;
+    padding-left: 10%;
 }
 
 #navbar a {
@@ -44,10 +45,12 @@ html {
 }
 
 #navbar-logo {
-    position: relative;
-    left: 10%;
     font-size: 20px;
     font-weight: bold;
+}
+
+#navbar-menu {
+    position: relative;
 }
 
 #navbar-login {

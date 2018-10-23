@@ -28,6 +28,9 @@ function resizeDivs() {
     if (document.getElementById("ad-placed")) {
         expandDiv(document.getElementById("ad-placed"));
     }
+    if (document.getElementById("view-ads")) {
+        expandDiv(document.getElementById("view-ads"));
+    }
 }
 
 function expandDiv(element) {

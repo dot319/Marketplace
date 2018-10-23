@@ -4,7 +4,7 @@
         <a href="index.php">Marketplace</a>
         </div>
         <div id="navbar-menu">
-
+            <a href="viewads.php">Browse ads</a>
         </div>
 
 <?php
