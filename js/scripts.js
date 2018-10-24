@@ -34,6 +34,12 @@ function resizeDivs() {
     if (document.getElementById("ad-details")) {
         expandDiv(document.getElementById("ad-details"));
     }
+    if (document.getElementById("message-sent")) {
+        expandDiv(document.getElementById("message-sent"));
+    }
+    if (document.getElementById("messages")) {
+        expandDiv(document.getElementById("messages"));
+    }
 }
 
 function expandDiv(element) {

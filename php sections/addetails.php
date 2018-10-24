@@ -34,7 +34,7 @@ while ($row = $myResult->fetch_assoc()) {
 <?php if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] > 0) { ?>
 
         <div id="ad-details-contact-form">
-            <form method="post" action="messagesent.php">
+            <form method="post" action="messagesent.php?AdID=<?php echo($AdID); ?>">
                 <p><textarea name="message" placeholder="Write a message to the seller."></textarea></p>
                 <p><input type="submit" value="Send the seller a message!"></p>
             </form>
