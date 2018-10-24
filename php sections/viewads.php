@@ -22,7 +22,7 @@ while ($row = $myResult->fetch_assoc()) {
     <p><b>Price: </b>&euro;" . $row['Price'] . "</p>
     <p><b>Description: </b>" . $row['Description'] . "</p>
     <p><b>Placed by: </b>" . $row['Username'] . "</p>
-    <p><a href='addetails.php?AdID=" . urlencode($row['AdID']) . "'>View this ad</a></p>
+    <p><a href='addetails.php?AdID=" . urlencode($row['AdID']) . "'><button type='button' class='ad-item-view-button'>View this ad</button></a></p>
 </div>");
 }
 

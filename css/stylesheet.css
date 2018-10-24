@@ -226,6 +226,15 @@ html {
     padding: 10px;
 }
 
+.ad-item-view-button {
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 /* ========== Ad details =========================================================== */
 #ad-details-wrapper {
     margin: 0px 100px;
