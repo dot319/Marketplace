@@ -1,11 +1,19 @@
 <div class="outer" id="view-ads">
-    Browse ads placed by users below:<br />
+
+    See ads placed by users below:<br />
 
 <?php
 
 include 'php sections/connecttodatabase.php';
 
-$myQuery = "SELECT * FROM ads ORDER BY AdID DESC LIMIT 50";
+if (isset($_POST['searchquery'])) {
+    $searchQuery = $_POST['searchquery'];
+    $mySearchQuery = "WHERE Title LIKE '%$searchQuery%' ";
+} else {
+    $mySearchQuery = "";
+}
+
+$myQuery = "SELECT * FROM ads " . $mySearchQuery . "ORDER BY AdID DESC LIMIT 50";
 $myResult = $conn->query($myQuery);
 
 while ($row = $myResult->fetch_assoc()) {

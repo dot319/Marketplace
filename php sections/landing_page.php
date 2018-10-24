@@ -5,7 +5,7 @@
     </div>
     <div id="landing-page-searchbar">
         <form method="post" action="viewads.php">
-            <input id="landing-page-searchbar-itself" type="text" placeholder="Search for products...">
+            <input name="searchquery" id="landing-page-searchbar-itself" type="text" placeholder="Search for products...">
             <input id="landing-page-searchbutton-itself" type="submit" value="Go!">
         </form>
     </div>

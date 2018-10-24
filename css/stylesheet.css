@@ -82,6 +82,7 @@ html {
     border-radius: 17.5px;
     border: none;
     margin: 0px 0px 0px 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.199);
 }
 
 #searchbar-place-ad-button {
