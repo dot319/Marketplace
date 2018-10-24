@@ -203,13 +203,46 @@ html {
     margin: 0px 100px;
 }
 
-#ad-details-wrapper div {
+#ad-itself-wrapper {
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#ad-itself-wrapper div {
     margin: 20px;
 }
 
 #ad-details-price-seller div {
     display: inline-block;
-    margin: 20px;
+    margin: 20px 20px 0px;
+    background-color: rgb(58, 58, 58);
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.212);
+}
+
+#ad-details-contact-form {
+    text-align: right;
+}
+
+#ad-details-contact-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#ad-details-contact-form input {
+    width: 50%;
+    min-width: 200px;
+    height: 50px;
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 15px;
+    margin: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.212);
 }
 
 /* ========== Copyright footer ===================================================== */

@@ -18,22 +18,36 @@ while ($row = $myResult->fetch_assoc()) {
 
 <div class="outer" id="ad-details">
     <div id="ad-details-wrapper">
-        <div id="ad-details-header">
-            <h2><?php echo($title); ?></h2>
+        <div id="ad-itself-wrapper">
+            <div id="ad-details-header">
+                <h2><?php echo($title); ?></h2>
+            </div>
+            <div id="ad-details-description">
+                <?php echo($description); ?>
+            </div>
+            <div id="ad-details-price-seller">
+                <div id="ad-details-price">&euro;<?php echo($price); ?></div>
+                <div id="ad-details-seller">Ad placed by: <b><?php echo($seller); ?></b></div>
+            </div>
         </div>
-        <div id="ad-details-description">
-            <?php echo($description); ?>
-        </div>
-        <div id="ad-details-price-seller">
-            <div id="ad-details-price"><?php echo($price); ?></div>
-            <div id="ad-details-seller"><?php echo($seller); ?></div>
-        </div>
+
+<?php if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] > 0) { ?>
+
         <div id="ad-details-contact-form">
             <form method="post" action="messagesent.php">
                 <p><textarea name="message" placeholder="Write a message to the seller."></textarea></p>
                 <p><input type="submit" value="Send the seller a message!"></p>
             </form>
         </div>
+
+<?php } else { ?>
+
+        <div id="ad-details-login-to-contact">
+            You must be logged in to contact the seller.
+        </div>
+
+<?php } ?>
+    
     </div>
 </div>
 
