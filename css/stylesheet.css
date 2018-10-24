@@ -198,6 +198,20 @@ html {
     padding: 10px;
 }
 
+/* ========== Ad details =========================================================== */
+#ad-details-wrapper {
+    margin: 0px 100px;
+}
+
+#ad-details-wrapper div {
+    margin: 20px;
+}
+
+#ad-details-price-seller div {
+    display: inline-block;
+    margin: 20px;
+}
+
 /* ========== Copyright footer ===================================================== */
 #copyright-footer {
     width: 70%;

@@ -14,6 +14,7 @@ while ($row = $myResult->fetch_assoc()) {
     <p><b>Price: </b>" . $row['Price'] . "</p>
     <p><b>Description: </b>" . $row['Description'] . "</p>
     <p><b>Placed by: </b>" . $row['Username'] . "</p>
+    <p><a href='addetails.php?AdID=" . urlencode($row['AdID']) . "'>View this ad</a></p>
 </div>");
 }
 

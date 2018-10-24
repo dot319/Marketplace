@@ -31,6 +31,9 @@ function resizeDivs() {
     if (document.getElementById("view-ads")) {
         expandDiv(document.getElementById("view-ads"));
     }
+    if (document.getElementById("ad-details")) {
+        expandDiv(document.getElementById("ad-details"));
+    }
 }
 
 function expandDiv(element) {
