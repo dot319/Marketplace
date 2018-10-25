@@ -283,6 +283,10 @@ html {
 }
 
 /* ========== Messages ============================================================= */
+#messages-header {
+    text-align: center;
+}
+
 .message-item {
     margin: 10px;
     padding: 10px;

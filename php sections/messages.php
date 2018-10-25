@@ -1,4 +1,9 @@
 <div class="outer" id="messages">
+<div id="messages-header">
+<a href="messages.php?box=in">Inbox</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="messages.php?box=out">Sent messages</a>
+</div>
 
 <?php
 
@@ -6,38 +11,40 @@ include 'php sections/connecttodatabase.php';
 
 $UserID = $_SESSION['UserID'];
 
-$myQuery = "SELECT * FROM messages
-WHERE ReceiverID=$UserID OR SenderID=$UserID
-ORDER BY MessageID DESC";
-$myResult = $conn->query($myQuery);
+if ($_GET['box'] == 'out') {
+    $myQuery = "SELECT * FROM messages
+    WHERE SenderID=$UserID
+    ORDER BY MessageID DESC
+    LIMIT 100";
+    $myResult = $conn->query($myQuery);
 
-if ($myResult->num_rows == 0) {
-    echo("You haven't sent or received any messages yet.");
-}
-
-while ($row = $myResult->fetch_assoc()) {
-    echo("<div class='message-item'>
-    <p><b>Sender");
-
-    if ($row['SenderID'] == $UserID) {
-        echo(":</b> You");
-    } else {
-        echo("ID</b>: " . $row['SenderID']);
+    if ($myResult->num_rows == 0) {
+        echo("No messages to display.");
     }
-
-    echo("</p>
-    <p><b>Receiver");
-
-    if ($row['ReceiverID'] == $UserID) {
-        echo(":</b> You");
-    } else {
-        echo("ID</b>: " . $row['ReceiverID']);
+    while ($row = $myResult->fetch_assoc()) {
+        echo("<div class='message-item'>
+        <p><b>Subject:</b> Ad with ID-number " . $row['AdID'] . ".</p>
+        <p><b>Sent to:</b> User with ID-number " . $row['ReceiverID'] . ".</p>
+        <p><b>Message:</b> " . $row['Message'] . "</p>
+        </div>");
     }
+} else {
+    $myQuery = "SELECT * FROM messages
+    WHERE ReceiverID=$UserID
+    ORDER BY MessageID DESC
+    LIMIT 100";
+    $myResult = $conn->query($myQuery);
 
-    echo("</p>
-    <p><b>Ad Id:</b> " . $row['AdID'] . "</p>
-    <p><b>Message:</b> " . $row['Message'] . "</p>
-    </div>");
+    if ($myResult->num_rows == 0) {
+        echo("No messages to display.");
+    }
+    while ($row = $myResult->fetch_assoc()) {
+        echo("<div class='message-item'>
+        <p><b>Subject:</b> Ad with ID-number " . $row['AdID'] . ".</p>
+        <p><b>From:</b> User with ID-number " . $row['SenderID'] . ".</p>
+        <p><b>Message:</b> " . $row['Message'] . "</p>
+        </div>");
+    }
 }
 
 ?>
