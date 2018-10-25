@@ -13,19 +13,25 @@ echo("Sender ID: " . $SenderID . "<br />");
 echo("Ad ID: " . $AdID . "<br />");
 echo("Message: " . $Message . "<br />");
 
-$myQuery = "SELECT Username FROM Ads WHERE AdID=$AdID";
-$myResult = $conn->query($myQuery);
-while ($row = $myResult->fetch_assoc()) {
-    $ReceiverUserName = $row['Username'];
-}
+if(!isset($_GET['reply'])) {
 
-$myQuery = "SELECT UserID FROM Users WHERE Username='$ReceiverUserName'";
-$myResult = $conn->query($myQuery);
-while ($row = $myResult->fetch_assoc()) {
-    $ReceiverID = $row['UserID'];
-}
+    $myQuery = "SELECT Username FROM Ads WHERE AdID=$AdID";
+    $myResult = $conn->query($myQuery);
+    while ($row = $myResult->fetch_assoc()) {
+        $ReceiverUserName = $row['Username'];
+    }
 
-echo("ReceiverID: " . $ReceiverID . "<br />");
+    $myQuery = "SELECT UserID FROM Users WHERE Username='$ReceiverUserName'";
+    $myResult = $conn->query($myQuery);
+    while ($row = $myResult->fetch_assoc()) {
+        $ReceiverID = $row['UserID'];
+    }
+
+    echo("ReceiverID: " . $ReceiverID . "<br />");
+} else {
+    $ReceiverID = $_POST['receiverID'];
+    echo("ReceiverID: " . $ReceiverID . "<br />");
+}
 
 $myQuery = "INSERT INTO Messages(`SenderID`, `ReceiverID`, `AdID`, `Message`)
 VALUES ('$SenderID', '$ReceiverID', '$AdID', '$Message')";

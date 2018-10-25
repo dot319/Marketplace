@@ -3,7 +3,6 @@ window.onload = function() {
 }
 
 function resizeDivs() {
-    console.log("test");
     if (document.getElementById("registration-form")) {
         expandDiv(document.getElementById("registration-form"));
     }
