@@ -287,10 +287,35 @@ html {
     text-align: center;
 }
 
+#inbox-header {
+    padding: 10px;
+    
+}
+
 .message-item {
     margin: 10px;
     padding: 10px;
     background-color: rgb(231, 231, 231);
+}
+
+.message-item form {
+    text-align: right;
+}
+
+.message-item textarea {
+    height: 100px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.message-item input {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-right: 50px;
+    padding: 10px;
 }
 
 /* ========== Copyright footer ===================================================== */
