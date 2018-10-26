@@ -2,6 +2,12 @@
 
 <?php 
 
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
+/*** THIS! ***/
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 require_once 'php sections/connecttodatabase.php';
 
 $username = $password = $confirm_password = "";
@@ -14,12 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty(trim($_POST['username']))) {
         $username_err = "You need to enter a Username";
     } else {
-        $myQuery = "SELECT id FROM users 
+        $myQuery = "SELECT UserID FROM users 
         WHERE username = ?";
         if ($stmt = mysqli_prepare($conn, $myQuery)) {
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             $param_username = trim($_POST['username']);
-            if (mysqli_statement_execute($stmt)) {
+            if (mysqli_stmt_execute($stmt)) {
                 mysqli_stmt_store_result($stmt);
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     $username_err = "Username already taken. Pick another one!";

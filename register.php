@@ -12,7 +12,7 @@
 
         <?php include 'php sections/topsearchbar.php' ?>
 
-        <?php include 'php sections/registerform.php' ?>
+        <?php include 'php sections/newregister.php' ?>
 
         <?php include 'php sections/footer.php' ?>
 

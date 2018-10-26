@@ -5,17 +5,18 @@
 
 include 'php sections/connecttodatabase.php';
 
-$email = $_POST["email"];
-$password = $_POST["password"];
+$username = trim($_POST["username"]);
+$password = trim($_POST["password"]);
 
-$myQuery = "SELECT `UserID`, `Username`, `Email`, `Password` FROM users WHERE email = '$email'";
+$myQuery = "SELECT `UserID`, `Username`, `Password` FROM users WHERE username = '$username'";
 $result = $conn->query($myQuery);
 
 if ($result->num_rows == 0) {
-    echo("Sorry, we don't know that email address!");
+    echo("Sorry, we don't know that username!");
 } elseif ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        if ($password == $row["Password"]) {
+
+        if(password_verify($password, $row['Password'])) {
             echo("Your password is correct. <br />
             Welcome, " . $row['Username'] . "!<br />");
             $_SESSION["UserID"] = $row["UserID"];
