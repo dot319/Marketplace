@@ -13,7 +13,7 @@ if (isset($_POST['searchquery'])) {
     $mySearchQuery = "";
 }
 
-if (isset($_POST['category'])) {
+if (isset($_POST['category']) && $_POST['category'] != "0") {
     $category = $_POST['category'];
     $myCatQuery = "AND CatId = '$category' ";
     if ($mySearchQuery == "") {
@@ -23,10 +23,25 @@ if (isset($_POST['category'])) {
     $myCatQuery = "";
 }
 
+if (isset($_POST['orderby']) && $_POST['orderby'] != "0") {
+    $orderBy = $_POST['orderby'];
+    switch ($orderBy) {
+        case "price-desc":
+        $myOrderQuery = "ORDER BY Price DESC ";
+        break;
+        case "price-asc":
+        $myOrderQuery = "ORDER BY Price ASC ";
+        break;
+    }
+} else {
+    $myOrderQuery = "ORDER BY ADid DESC ";
+}
+
 ?>
 
     <form method="post" action="viewads.php">
         <p>Category: <select name="category" placeholder="category">
+            <option value="0">All</option>
             <option value="1">Art</option>
             <option value="2">Bicycles and mopeds</option>
             <option value="3">Books</option>
@@ -46,6 +61,11 @@ if (isset($_POST['category'])) {
             <option value="16">Tickets</option>
             <option value="17">Other</option>
         </select>
+        Order by: <select name="orderby" placeholder="Order by">
+            <option value="0">No filter</option>
+            <option value="price-desc">Price - descending</option>
+            <option value="price-asc">Price - ascending</option>
+        </select>
 <?php if (isset($searchQuery)) { ?>
         <input type="hidden" name="searchquery" value="<?php echo($searchQuery); ?>">
 <?php } ?>
@@ -54,7 +74,7 @@ if (isset($_POST['category'])) {
 
 <?php
 
-$myQuery = "SELECT * FROM ads " . $mySearchQuery . $myCatQuery . "ORDER BY AdID DESC LIMIT 50";
+$myQuery = "SELECT * FROM ads " . $mySearchQuery . $myCatQuery . $myOrderQuery . "LIMIT 50";
 $myResult = $conn->query($myQuery);
 
 while ($row = $myResult->fetch_assoc()) {
